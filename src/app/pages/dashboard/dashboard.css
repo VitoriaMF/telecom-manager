@@ -1,0 +1,44 @@
+.mat-elevation-z8 {
+  width: 100%;
+  background-color: white;
+}
+
+.card-header {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.example-card {
+  flex: 1 1 300px;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.chart-container {
+  display: flex;
+  flex-wrap: wrap;        
+  justify-content: center;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.chart-item {
+  flex: 1 1 48%;            
+  min-width: 300px;         
+  box-sizing: border-box;
+}
+
+@media (max-width: 768px) {
+  .chart-item {
+    flex: 1 1 100%;
+  }
+}
+
+canvas {
+  width: 100% !important;
+  height: auto !important;
+}
+

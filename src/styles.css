@@ -1,0 +1,55 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+  font-family: "Poppins", sans-serif;
+}
+
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.container-pages {
+  padding: 2rem;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  background: #fff;
+}
+
+.title-pages {
+  font-size: 1.8rem;
+  font-weight: normal;
+}
+
+.header-pages {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  justify-items: center;
+  margin-bottom: 1rem;
+}
+
+button[mat-flat-button] {
+  background-color: #5a5ed6 !important;
+  color: #fff;
+  border-radius: 4px;
+  padding: 8px 24px;
+  box-shadow: 0 2px 4px rgba(25, 118, 210, 0.08);
+  transition: background 0.2s;
+}
+
+button[mat-flat-button]:hover {
+  background-color: rgba(67, 71, 179, 0.9);
+}
+
+.submit-button {
+  border-radius: 4px !important;
+}
+
+.icon-delete {
+  color: #ff3d71;
+}

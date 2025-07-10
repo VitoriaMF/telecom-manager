@@ -1,0 +1,44 @@
+.sidenav-container {
+  height: 100vh;
+  background-color: #f8f9fc;
+}
+
+.sidenav {
+  padding: 1rem;
+  max-width: 260px;
+  background: #1c2536;
+  color: #fff;
+  border-top-right-radius: 0 !important;
+  border-bottom-right-radius: 0 !important;
+}
+
+.sidebar-title {
+  font-size: 1.3rem;
+  margin: 2rem 0;
+  text-align: center;
+}
+
+a[mat-button] {
+  display: flex;
+  color: #fff;
+  margin: 8px 0;
+  align-items: center;
+  justify-content: flex-start; /* Alinha o texto à esquerda */
+  text-align: left;
+}
+
+a[mat-button]:hover {
+  background: #232b3a;
+  color: #fff;
+  border-radius: 4px;
+  transition: background 0.2s;
+}
+
+a[mat-button] mat-icon {
+  color: #5a5ed6;
+}
+
+a.active-link {
+  border-radius: 4px;
+  background: #252e3e;
+}

@@ -1,0 +1,86 @@
+<div class="container-pages">
+  <div class="header-pages">
+    <h2 class="title-pages">
+      {{ contratoId ? "Editar contrato" : "Cadastrar novo contrato" }}
+    </h2>
+  </div>
+
+  <form [formGroup]="form" (ngSubmit)="onSubmit()" class="form-container">
+    <mat-form-field appearance="fill" class="form-field custom-input">
+      <mat-label>Nome Filial</mat-label>
+      <input matInput formControlName="nomeFilial" placeholder="Ex: "/>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill" class="form-field custom-input">
+      <mat-label>Id Operadora</mat-label>
+      <input matInput formControlName="operadoraId" />
+    </mat-form-field>
+
+    <mat-form-field appearance="fill" class="form-field custom-input">
+      <mat-label>Plano Contratado</mat-label>
+      <input matInput formControlName="planoContratado" placeholder="Ex: "/>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill" class="form-field custom-input">
+      <mat-label>Data Inicio</mat-label>
+      <input
+        matInput
+        [matDatepicker]="pickerEmissao"
+        formControlName="dataInicio"
+        placeholder="Selecione a data"
+      />
+      <mat-datepicker-toggle
+        matSuffix
+        [for]="pickerEmissao"
+      ></mat-datepicker-toggle>
+      <mat-datepicker #pickerEmissao></mat-datepicker>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill" class="form-field custom-input">
+      <mat-label>Data Vencimento</mat-label>
+      <input
+        matInput
+        [matDatepicker]="pickerVencimento"
+        formControlName="dataVencimento"
+        placeholder="Selecione a data"
+      />
+      <mat-datepicker-toggle
+        matSuffix
+        [for]="pickerVencimento"
+      ></mat-datepicker-toggle>
+      <mat-datepicker #pickerVencimento></mat-datepicker>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill" class="form-field custom-input">
+      <mat-label>Valor Mensal</mat-label>
+      <input
+        matInput
+        formControlName="valorMensal"
+        type="number"
+        placeholder="Ex: 60,00"
+      />
+    </mat-form-field>
+
+    <mat-form-field appearance="fill" class="form-field custom-input">
+      <mat-label>Status</mat-label>
+      <mat-select formControlName="status">
+        <mat-option *ngFor="let tipo of tiposArray" [value]="tipo.id">
+          {{ tipo.nome }}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <div class="button-container">
+      <button
+        class="submit-button"
+        mat-raised-button
+        color="primary"
+        type="submit"
+        [disabled]="form.invalid"
+      >
+        {{ contratoId ? "Atualizar" : "Cadastrar" }}
+      </button>
+      <button type="reset" mat-flat-button (click)="onBack()">Voltar</button>
+    </div>
+  </form>
+</div>

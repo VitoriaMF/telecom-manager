@@ -1,0 +1,10 @@
+.btn-right {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 16px;
+}
+
+.mat-elevation-z8 {
+  width: 100%;
+  background-color: white;
+}
